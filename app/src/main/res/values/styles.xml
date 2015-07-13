@@ -11,8 +11,8 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <item name="theme_color">@color/blue</item>
-        <item name="theme_status_bar_color">@color/dark_blue</item>
+        <item name="theme_color">@color/green</item>
+        <item name="theme_status_bar_color">@color/dark_green</item>
     </style>
 
     <style name="AppTheme.Red">

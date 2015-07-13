@@ -41,7 +41,7 @@ public class RootApp extends Application {
      */
     private void initLogger() {
         Logger.init(getString(R.string.app_name))
-                .setMethodCount(3)
+                .setMethodCount(2)
                 .hideThreadInfo()
                 .setLogLevel(LogLevel.FULL)
                 .setMethodOffset(2);

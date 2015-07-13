@@ -4,6 +4,6 @@
 /app/build
 /app/app.iml
 /captures
-/local.properties
-/Tutorial.iml
+local.properties
+Tutorial.iml
 

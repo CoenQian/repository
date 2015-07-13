@@ -1,0 +1,57 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- ToolBar和ActionBar的颜色 -->
+        <item name="colorPrimary">?attr/theme_color</item>
+        <!-- StatusBar颜色 -->
+        <item name="colorPrimaryDark">?attr/theme_status_bar_color</item>
+
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="theme_color">@color/blue</item>
+        <item name="theme_status_bar_color">@color/dark_blue</item>
+    </style>
+
+    <style name="AppTheme.Red">
+        <item name="theme_color">@color/red</item>
+        <item name="theme_status_bar_color">@color/dark_red</item>
+    </style>
+
+    <style name="AppTheme.Pink">
+        <item name="theme_color">@color/pink</item>
+        <item name="theme_status_bar_color">@color/dark_pink</item>
+    </style>
+
+    <style name="AppTheme.Blue">
+        <item name="theme_color">@color/blue</item>
+        <item name="theme_status_bar_color">@color/dark_blue</item>
+    </style>
+
+    <style name="AppTheme.Cyan">
+        <item name="theme_color">@color/cyan</item>
+        <item name="theme_status_bar_color">@color/dark_cyan</item>
+    </style>
+
+    <style name="AppTheme.Green">
+        <item name="theme_color">@color/green</item>
+        <item name="theme_status_bar_color">@color/dark_green</item>
+    </style>
+
+    <style name="AppTheme.Yellow">
+        <item name="theme_color">@color/yellow</item>
+        <item name="theme_status_bar_color">@color/dark_yellow</item>
+    </style>
+
+    <style name="AppTheme.Orange">
+        <item name="theme_color">@color/orange</item>
+        <item name="theme_status_bar_color">@color/dark_orange</item>
+    </style>
+
+    <style name="AppTheme.Gray">
+        <item name="theme_color">@color/gray</item>
+        <item name="theme_status_bar_color">@color/dark_gray</item>
+    </style>
+</resources>

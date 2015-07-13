@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:statusBarColor">?attr/theme_status_bar_color</item>
+        <item name="android:navigationBarColor">?attr/theme_status_bar_color</item>
+    </style>
+
+</resources>

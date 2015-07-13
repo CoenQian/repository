@@ -12,7 +12,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <item name="theme_color">@color/green</item>
-        <item name="theme_status_bar_color">@color/dark_green</item>
+        <item name="theme_status_bar_color">@color/material_blue_grey_800</item>
     </style>
 
     <style name="AppTheme.Red">

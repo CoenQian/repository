@@ -118,6 +118,66 @@ public class PreferenceUtils {
      * @param key 键名
      * @return 属性值
      */
+    public static float getCommonFloat(@NonNull String key) {
+        return getFloat(key, true);
+    }
+
+    /**
+     * 获取当前用户属性值.
+     *
+     * @param key 键名
+     * @return 属性值
+     */
+    public static float getUserFloat(@NonNull String key) {
+        return getFloat(key, false);
+    }
+
+    /**
+     * 获取公共属性值.
+     *
+     * @param key 键名
+     * @return 属性值
+     */
+    public static long getCommonLong(@NonNull String key) {
+        return getLong(key, true);
+    }
+
+    /**
+     * 获取当前用户属性值.
+     *
+     * @param key 键名
+     * @return 属性值
+     */
+    public static long getUserLong(@NonNull String key) {
+        return getLong(key, false);
+    }
+
+    /**
+     * 获取公共属性值.
+     *
+     * @param key 键名
+     * @return 属性值
+     */
+    public static boolean getCommonBoolean(@NonNull String key) {
+        return getBoolean(key, true);
+    }
+
+    /**
+     * 获取当前用户属性值.
+     *
+     * @param key 键名
+     * @return 属性值
+     */
+    public static boolean getUserBoolean(@NonNull String key) {
+        return getBoolean(key, false);
+    }
+
+    /**
+     * 获取公共属性值.
+     *
+     * @param key 键名
+     * @return 属性值
+     */
     public static int getCommonInt(@NonNull String key) {
         return getInt(key, true);
     }

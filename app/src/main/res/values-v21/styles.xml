@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBaseTheme" parent="@style/BaseTheme">
+        <!-- 导航栏颜色 -->
+        <item name="android:navigationBarColor">?attr/theme_color</item>
+    </style>
+</resources>

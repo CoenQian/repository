@@ -25,4 +25,7 @@ public class Preferences {
 
     /** 登录用户的帐号. */
     public static final String ACCOUNT = "account";
+
+    /** 主题. */
+    public static final String THEME = "theme";
 }

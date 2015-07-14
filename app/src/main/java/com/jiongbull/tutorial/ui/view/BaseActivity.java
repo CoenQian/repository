@@ -15,16 +15,27 @@
  */
 package com.jiongbull.tutorial.ui.view;
 
+import com.jiongbull.tutorial.util.ThemeUtils;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * .
+ * Activity基类.
  */
 public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initTheme();
+    }
+
+    /**
+     * 设置主题.
+     */
+    private void initTheme() {
+        ThemeUtils.Theme theme = ThemeUtils.getCurTheme();
+        ThemeUtils.setTheme(this, theme);
     }
 }

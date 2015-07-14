@@ -1,57 +1,140 @@
 <resources>
 
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
-
+    <!-- 基本主题 -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- ToolBar和ActionBar的颜色 -->
         <item name="colorPrimary">?attr/theme_color</item>
         <!-- StatusBar颜色 -->
         <item name="colorPrimaryDark">?attr/theme_status_bar_color</item>
-
+        <!-- 组件的强调色 -->
+        <item name="colorAccent">?attr/theme_color</item>
+        <!-- 背景色 -->
+        <item name="android:windowBackground">@color/material_white</item>
     </style>
 
-    <!-- Base application theme. -->
+    <!-- 应用基本主题 -->
+    <style name="AppBaseTheme" parent="BaseTheme">
+        <!-- 可选item的背景 -->
+        <item name="android:selectableItemBackground">@drawable/sl_item</item>
+    </style>
+
+    <!-- 默认应用主题 -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <item name="theme_color">@color/green</item>
-        <item name="theme_status_bar_color">@color/material_blue_grey_800</item>
+        <item name="theme_color">@color/material_blue_500</item>
+        <item name="theme_status_bar_color">@color/material_blue_700</item>
     </style>
 
+    <!-- 红色主题 -->
     <style name="AppTheme.Red">
-        <item name="theme_color">@color/red</item>
-        <item name="theme_status_bar_color">@color/dark_red</item>
+        <item name="theme_color">@color/material_red_500</item>
+        <item name="theme_status_bar_color">@color/material_red_700</item>
     </style>
 
+    <!-- 粉色主题 -->
     <style name="AppTheme.Pink">
-        <item name="theme_color">@color/pink</item>
-        <item name="theme_status_bar_color">@color/dark_pink</item>
+        <item name="theme_color">@color/material_pink_500</item>
+        <item name="theme_status_bar_color">@color/material_pink_700</item>
     </style>
 
+    <!-- 紫色主题 -->
+    <style name="AppTheme.Purple">
+        <item name="theme_color">@color/material_purple_500</item>
+        <item name="theme_status_bar_color">@color/material_purple_700</item>
+    </style>
+
+    <!-- 深紫色主题 -->
+    <style name="AppTheme.DeepPurple">
+        <item name="theme_color">@color/material_deep_purple_500</item>
+        <item name="theme_status_bar_color">@color/material_deep_purple_700</item>
+    </style>
+
+    <!-- 靛蓝色主题 -->
+    <style name="AppTheme.Indigo">
+        <item name="theme_color">@color/material_indigo_500</item>
+        <item name="theme_status_bar_color">@color/material_indigo_700</item>
+    </style>
+
+    <!-- 蓝色主题 -->
     <style name="AppTheme.Blue">
-        <item name="theme_color">@color/blue</item>
-        <item name="theme_status_bar_color">@color/dark_blue</item>
+        <item name="theme_color">@color/material_blue_500</item>
+        <item name="theme_status_bar_color">@color/material_blue_700</item>
     </style>
 
+    <!-- 浅蓝色主题 -->
+    <style name="AppTheme.LightBlue">
+        <item name="theme_color">@color/material_light_blue_500</item>
+        <item name="theme_status_bar_color">@color/material_light_blue_700</item>
+    </style>
+
+    <!-- 青绿色主题 -->
     <style name="AppTheme.Cyan">
-        <item name="theme_color">@color/cyan</item>
-        <item name="theme_status_bar_color">@color/dark_cyan</item>
+        <item name="theme_color">@color/material_cyan_500</item>
+        <item name="theme_status_bar_color">@color/material_cyan_700</item>
     </style>
 
+    <!-- 青色主题 -->
+    <style name="AppTheme.Teal">
+        <item name="theme_color">@color/material_teal_500</item>
+        <item name="theme_status_bar_color">@color/material_teal_700</item>
+    </style>
+
+    <!-- 绿色主题 -->
     <style name="AppTheme.Green">
-        <item name="theme_color">@color/green</item>
-        <item name="theme_status_bar_color">@color/dark_green</item>
+        <item name="theme_color">@color/material_green_500</item>
+        <item name="theme_status_bar_color">@color/material_green_700</item>
     </style>
 
+    <!-- 浅绿色主题 -->
+    <style name="AppTheme.LightGreen">
+        <item name="theme_color">@color/material_light_green_500</item>
+        <item name="theme_status_bar_color">@color/material_light_green_700</item>
+    </style>
+
+    <!-- 黄绿色主题 -->
+    <style name="AppTheme.Lime">
+        <item name="theme_color">@color/material_lime_500</item>
+        <item name="theme_status_bar_color">@color/material_lime_700</item>
+    </style>
+
+    <!-- 黄色主题 -->
     <style name="AppTheme.Yellow">
-        <item name="theme_color">@color/yellow</item>
-        <item name="theme_status_bar_color">@color/dark_yellow</item>
+        <item name="theme_color">@color/material_yellow_500</item>
+        <item name="theme_status_bar_color">@color/material_yellow_700</item>
     </style>
 
+    <!-- 琥珀色主题 -->
+    <style name="AppTheme.Amber">
+        <item name="theme_color">@color/material_amber_500</item>
+        <item name="theme_status_bar_color">@color/material_amber_700</item>
+    </style>
+
+    <!-- 橙色主题 -->
     <style name="AppTheme.Orange">
-        <item name="theme_color">@color/orange</item>
-        <item name="theme_status_bar_color">@color/dark_orange</item>
+        <item name="theme_color">@color/material_orange_500</item>
+        <item name="theme_status_bar_color">@color/material_orange_700</item>
     </style>
 
-    <style name="AppTheme.Gray">
-        <item name="theme_color">@color/gray</item>
-        <item name="theme_status_bar_color">@color/dark_gray</item>
+    <!-- 深橙色主题 -->
+    <style name="AppTheme.DeepOrange">
+        <item name="theme_color">@color/material_deep_orange_500</item>
+        <item name="theme_status_bar_color">@color/material_deep_orange_700</item>
+    </style>
+
+    <!-- 棕色主题 -->
+    <style name="AppTheme.Brown">
+        <item name="theme_color">@color/material_brown_500</item>
+        <item name="theme_status_bar_color">@color/material_brown_700</item>
+    </style>
+
+    <!-- 灰色主题 -->
+    <style name="AppTheme.Grey">
+        <item name="theme_color">@color/material_grey_500</item>
+        <item name="theme_status_bar_color">@color/material_grey_700</item>
+    </style>
+
+    <!-- 蓝灰色主题 -->
+    <style name="AppTheme.BlueGrey">
+        <item name="theme_color">@color/material_blue_grey_500</item>
+        <item name="theme_status_bar_color">@color/material_blue_grey_700</item>
     </style>
 </resources>

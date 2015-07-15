@@ -15,11 +15,9 @@
  */
 package com.jiongbull.tutorial.ui.view;
 
-import android.os.Bundle;
-
 import com.jiongbull.tutorial.R;
-import com.jiongbull.tutorial.util.PreferenceUtils;
-import com.orhanobut.logger.Logger;
+
+import android.os.Bundle;
 
 /**
  * 主页.
@@ -29,9 +27,16 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    }
 
-        String str = PreferenceUtils.getCommonString("Jiong");
-        Logger.i("数据为: " + str);
+    @Override
+    protected int getLayoutResID() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initToolBar() {
+        super.initToolBar();
+
     }
 }

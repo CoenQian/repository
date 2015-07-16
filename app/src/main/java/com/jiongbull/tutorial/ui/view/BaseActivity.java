@@ -40,7 +40,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         initTheme();
         setContentView(getLayoutResID());
         ButterKnife.bind(this);
-        initToolBar();
     }
 
     protected abstract int getLayoutResID();
@@ -88,9 +87,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void initToolBar() {
-        if (mToolbar == null) {
-            return;
-        }
         setSupportActionBar(mToolbar);
 //        mToolbar.setTitle("Jiong");
 //        mToolbar.setSubtitle("Bull");

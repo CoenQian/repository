@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="function_names">
+        <!--<item>@string/export_configs</item>-->
+        <!--<item>@string/import_configs</item>-->
+        <item>@string/export_logs</item>
+        <item>@string/open_url</item>
+    </string-array>
+
+    <integer-array name="function_figures">
+        <!--<item>@drawable/animal_26</item>-->
+        <!--<item>@drawable/animal_27</item>-->
+        <item>@drawable/animal_12</item>
+        <item>@drawable/animal_26</item>
+    </integer-array>
+
+    <string-array name="funtion_intents">
+        <!--<item>com.sf.module.edms.helper.ui.view.ExportConfigsActivity</item>-->
+        <!--<item>com.sf.module.edms.helper.ui.view.ImportConfigsActivity</item>-->
+        <item>com.sf.module.edms.helper.ui.view.ExportLogsActivity</item>
+        <item>com.sf.module.edms.helper.ui.view.WebViewActivity</item>
+    </string-array>
+
+</resources>

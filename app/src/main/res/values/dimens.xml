@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 字号 -->
-    <dimen name="text_size_small">12dp</dimen>
-    <dimen name="text_size_medium">14dp</dimen>
-    <dimen name="text_size_large">16dp</dimen>
-    <dimen name="text_size_xlarge">20dp</dimen>
+    <dimen name="text_size_small">24dp</dimen>
+    <dimen name="text_size_medium">28dp</dimen>
+    <dimen name="text_size_large">32dp</dimen>
+    <dimen name="text_size_xlarge">40dp</dimen>
+
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_height">80dp</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dialog_width">700dp</dimen>
+    <dimen name="dialog_height">480dp</dimen>
+
+    <!-- CardView -->
+    <dimen name="card_view_radius">20dp</dimen>
+    <dimen name="card_view_elevation">5dp</dimen>
+    <dimen name="card_view_max_elevation">10dp</dimen>
+
+    <!-- ToolBar -->
+    <dimen name="toolbar_height">50dp</dimen>
+    <dimen name="toolbar_view_height">32dp</dimen>
+
+    <dimen name="item_function_width">300dp</dimen>
+    <dimen name="item_function_height">400dp</dimen>
+
+    <dimen name="item_detected_step_content_margin_top">6dp</dimen>
+
 </resources>

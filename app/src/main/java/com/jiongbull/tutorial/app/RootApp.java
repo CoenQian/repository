@@ -15,6 +15,7 @@
  */
 package com.jiongbull.tutorial.app;
 
+import com.facebook.stetho.Stetho;
 import com.jiongbull.tutorial.R;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
@@ -34,6 +35,8 @@ public class RootApp extends Application {
         super.onCreate();
         sContext = getApplicationContext();
         initLogger();
+        initStetho();
+        Thread.setDefaultUncaughtExceptionHandler(new CrashHandler(this));
     }
 
     /**
@@ -47,7 +50,15 @@ public class RootApp extends Application {
                 .setMethodOffset(2);
     }
 
+    /**
+     * 初始化Stetho.
+     */
+    private void initStetho() {
+        Stetho.initializeWithDefaults(this);
+    }
+
     public static Context getContext() {
         return sContext;
     }
+
 }

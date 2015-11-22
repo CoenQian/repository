@@ -2,13 +2,152 @@
 <resources>
 
     <!-- ToolBar -->
-    <style name="AppTheme.ToolBar">
+    <style name="ToolBar">
+        <item name="android:theme">@style/ToolBarTheme</item>
+        <item name="popupTheme">@style/ToolBarPopUpTheme</item>
+    </style>
+
+    <style name="ToolBarTheme" parent="Base.ThemeOverlay.AppCompat.ActionBar">
         <!-- 背景色 -->
         <item name="android:background">?attr/colorPrimary</item>
-        <!-- 标题颜色 -->
-        <item name="android:textColorPrimary">@color/material_white</item>
+        <!-- 主标题颜色 -->
+        <item name="android:textColorPrimary">@color/text_white</item>
+        <!-- 副标题颜色, 包含3个点的颜色 -->
+        <item name="android:textColorSecondary">@color/text_white</item>
+        <!-- 菜单文字颜色 -->
+        <item name="actionMenuTextColor">@color/text_white</item>
+    </style>
 
-        <item name="android:textColorSecondary">@color/material_white</item>
+    <style name="ToolBarPopUpTheme" parent="Base.ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/material_black</item>
+        <item name="android:background">@color/material_white</item>
+    </style>
+
+    <!-- Button -->
+    <style name="Button">
+        <item name="android:layout_height">@dimen/button_height</item>
+    </style>
+
+    <style name="Button.Big">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/sl_blue</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="ButtonStyle.Red">
+        <item name="android:background">@drawable/sl_red</item>
+    </style>
+
+    <style name="ButtonStyle.Pink">
+        <item name="android:background">@drawable/sl_pink</item>
+    </style>
+
+    <style name="ButtonStyle.Purple">
+        <item name="android:background">@drawable/sl_purple</item>
+    </style>
+
+    <style name="ButtonStyle.DeepPurple">
+        <item name="android:background">@drawable/sl_deep_purple</item>
+    </style>
+
+    <style name="ButtonStyle.Indigo">
+        <item name="android:background">@drawable/sl_indigo</item>
+    </style>
+
+    <style name="ButtonStyle.Blue">
+        <item name="android:background">@drawable/sl_blue</item>
+    </style>
+
+    <style name="ButtonStyle.LightBlue">
+        <item name="android:background">@drawable/sl_light_blue</item>
+    </style>
+
+    <style name="ButtonStyle.Cyan">
+        <item name="android:background">@drawable/sl_cyan</item>
+    </style>
+
+    <style name="ButtonStyle.Teal">
+        <item name="android:background">@drawable/sl_teal</item>
+    </style>
+
+    <style name="ButtonStyle.Green">
+        <item name="android:background">@drawable/sl_green</item>
+    </style>
+
+    <style name="ButtonStyle.LightGreen">
+        <item name="android:background">@drawable/sl_light_green</item>
+    </style>
+
+    <style name="ButtonStyle.Lime">
+        <item name="android:background">@drawable/sl_lime</item>
+    </style>
+
+    <style name="ButtonStyle.Yellow">
+        <item name="android:background">@drawable/sl_yellow</item>
+    </style>
+
+    <style name="ButtonStyle.Amber">
+        <item name="android:background">@drawable/sl_amber</item>
+    </style>
+
+    <style name="ButtonStyle.Orange">
+        <item name="android:background">@drawable/sl_orange</item>
+    </style>
+
+    <style name="ButtonStyle.DeepOrange">
+        <item name="android:background">@drawable/sl_deep_orange</item>
+    </style>
+
+    <style name="ButtonStyle.Brown">
+        <item name="android:background">@drawable/sl_brown</item>
+    </style>
+
+    <style name="ButtonStyle.Grey">
+        <item name="android:background">@drawable/sl_grey</item>
+    </style>
+
+    <style name="ButtonStyle.BlueGrey">
+        <item name="android:background">@drawable/sl_blue_grey</item>
+    </style>
+
+    <!-- CheckBox -->
+    <style name="CheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">?attr/colorAccent</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="Dialog.Full">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- CardView -->
+    <style name="CardView">
+        <item name="cardBackgroundColor">@color/material_white</item>
+        <item name="cardCornerRadius">@dimen/card_view_radius</item>
+        <item name="cardElevation">@dimen/card_view_elevation</item>
+        <item name="cardMaxElevation">@dimen/card_view_max_elevation</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">false</item>
+    </style>
+
+    <!-- ProgressBar -->
+    <style name="ProgressBar">
+        <item name="android:layout_gravity">center</item>
     </style>
 
 </resources>

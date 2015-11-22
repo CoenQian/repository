@@ -15,7 +15,7 @@ package com.jiongbull.tutorial.constant;
 public enum Extra {
 
     /** 前缀, 请勿使用. */
-    PRE("com.sf.module.edms.helper.extra."),
+    PRE("com.jiongbull.tutorial.extra."),
     INFO(PRE.mValue + "INFO"),
     NAME(PRE.mValue + "NAME");
 

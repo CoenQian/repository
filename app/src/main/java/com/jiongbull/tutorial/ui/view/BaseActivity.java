@@ -1,24 +1,21 @@
 /*
  * -----------------------------------------------------------------
- * Copyright (C) 2015, by Peanut Run, Shenzhen, All rights reserved.
+ * Copyright (C) 2015, by SF-Express, Shenzhen, All rights reserved.
  * -----------------------------------------------------------------
  *
  * File: BaseActivity
  * Author: JiongBull
- * Version: 1.0
- * Create: 2015/7/9 0009
- *
- * Changes (from 2015/7/9 0009)
- * -----------------------------------------------------------------
- * 2015/7/9 0009 : 创建 BaseActivity (JiongBull);
- * -----------------------------------------------------------------
+ * Create: 2015/9/22
  */
 package com.jiongbull.tutorial.ui.view;
 
-import com.jiongbull.tutorial.R;
-import com.jiongbull.tutorial.util.ThemeUtils;
+import com.sf.module.edms.helper.R;
+import com.sf.module.edms.helper.uitl.ThemeUtils;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -36,13 +33,41 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         initTheme();
-        setContentView(getLayoutResID());
+        super.onCreate(savedInstanceState);
+        setContentView(getLayoutResId());
         ButterKnife.bind(this);
+        initVariables();
+        initToolBar();
+        initViews();
     }
 
-    protected abstract int getLayoutResID();
+    /**
+     * 获取布局资源Id.
+     *
+     * @return 布局资源Id.
+     */
+    protected abstract int getLayoutResId();
+
+    /**
+     * 初始化操作栏.
+     */
+    protected abstract void initToolBar();
+
+    /**
+     * 初始化类变量.
+     */
+    protected abstract void initVariables();
+
+    /**
+     * 初始化视图.
+     */
+    protected abstract void initViews();
+
+    protected void initToolBar(@NonNull String title) {
+        mToolbar.setTitle(title);
+        setSupportActionBar(mToolbar);
+    }
 
     /**
      * 淡化SystemBar.
@@ -61,19 +86,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * 隐藏StatusBar.
      */
     public void hideStatusBar() {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         manageSystemBar(uiOptions);
-    }
-
-    /**
-     * 设置主题.
-     */
-    private void initTheme() {
-        ThemeUtils.Theme theme = ThemeUtils.getCurTheme();
-        ThemeUtils.setTheme(this, theme);
     }
 
     /**
@@ -86,12 +103,20 @@ public abstract class BaseActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    protected void initToolBar() {
-        setSupportActionBar(mToolbar);
-//        mToolbar.setTitle("Jiong");
-//        mToolbar.setSubtitle("Bull");
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        }
+    /**
+     * 设置主题.
+     */
+    private void initTheme() {
+        ThemeUtils.Theme theme = ThemeUtils.getCurTheme();
+        ThemeUtils.setTheme(this, theme);
+    }
+
+    @Nullable
+    @Override
+    public Intent getSupportParentActivityIntent() {
+        Intent intent = new Intent();
+        intent.setClass(this, getIntent().getClass());
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        return intent;
     }
 }

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 窗口颜色 -->
     <color name="bg_window">@color/material_white</color>
 
+    <!-- 文本颜色 -->
     <color name="text_white">@color/material_white</color>
     <color name="text_grey">@color/material_grey_700</color>
 
+    <!-- 按钮文本颜色 -->
+    <color name="button_text_color">@color/text_white</color>
 
+    <color name="drawer_header_mask_color">?attr/colorPrimary</color>
 </resources>

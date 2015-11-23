@@ -15,13 +15,11 @@
  */
 package com.jiongbull.tutorial.util;
 
-import com.jiongbull.tutorial.R;
-import com.jiongbull.tutorial.app.RootApp;
-import com.jiongbull.tutorial.constant.Preferences;
-
-import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
+
+import com.jiongbull.tutorial.R;
+import com.jiongbull.tutorial.constant.Preferences;
 
 import java.util.HashMap;
 
@@ -30,12 +28,9 @@ import java.util.HashMap;
  */
 public class ThemeUtils {
 
-    private static Context sContext;
-
     private static HashMap<Theme, Integer> sThemeStyles;
 
     static {
-        sContext = RootApp.getContext();
         sThemeStyles = new HashMap<>();
         sThemeStyles.put(Theme.BLUE, R.style.AppTheme_Blue);
         sThemeStyles.put(Theme.RED, R.style.AppTheme_Red);
@@ -64,12 +59,22 @@ public class ThemeUtils {
     /**
      * 设置主题.
      *
-     * @param activity {@link Activity}
-     * @param theme    {@link Theme}
+     * @param context {@link Context}
+     * @param theme   {@link Theme}
      */
-    public static void setTheme(@NonNull Activity activity, Theme theme) {
+    public static void setTheme(@NonNull Context context, @NonNull Theme theme) {
         int style = sThemeStyles.get(theme);
-        activity.setTheme(style);
+        context.setTheme(style);
+    }
+
+    /**
+     * 初始化主题.
+     *
+     * @param context {@link Context}
+     */
+    public static void initTheme(@NonNull Context context) {
+        ThemeUtils.Theme theme = ThemeUtils.getCurTheme();
+        ThemeUtils.setTheme(context, theme);
     }
 
     /**

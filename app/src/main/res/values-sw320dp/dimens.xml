@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 屏幕最小宽度为320dp的适配尺寸，与values-sw360dp目录下的dimens值比例为8:9 -->
+
+</resources>

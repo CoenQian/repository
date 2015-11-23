@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Button -->
-    <style name="ButtonStyle" parent="android:Widget.Button">
-        <item name="android:background">@drawable/rp_color</item>
-        <item name="android:textColor">@color/text_white</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
-    </style>
-
-    <style name="ButtonStyle.Red" />
-
-    <style name="ButtonStyle.Pink" />
-
-    <style name="ButtonStyle.Purple" />
-
-    <style name="ButtonStyle.DeepPurple" />
-
-    <style name="ButtonStyle.Indigo" />
-
-    <style name="ButtonStyle.Blue" />
-
-    <style name="ButtonStyle.LightBlue" />
-
-    <style name="ButtonStyle.Cyan" />
-
-    <style name="ButtonStyle.Teal" />
-
-    <style name="ButtonStyle.Green" />
-
-    <style name="ButtonStyle.LightGreen" />
-
-    <style name="ButtonStyle.Lime" />
-
-    <style name="ButtonStyle.Yellow" />
-
-    <style name="ButtonStyle.Amber" />
-
-    <style name="ButtonStyle.Orange" />
-
-    <style name="ButtonStyle.DeepOrange" />
-
-    <style name="ButtonStyle.Brown" />
-
-    <style name="ButtonStyle.Grey" />
-
-    <style name="ButtonStyle.BlueGrey" />
-
     <!-- ProgressBar -->
     <style name="ProgressBar">
         <item name="android:indeterminateTintMode">src_in</item>

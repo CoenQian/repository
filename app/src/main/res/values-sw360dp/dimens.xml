@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 屏幕最小宽度为360dp的适配尺寸，与values目录下的dimens同值 -->
+</resources>

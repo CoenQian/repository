@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigation_header_height">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_drawer_header" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="?attr/primary_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/navigation_header_avater_size"
+            android:layout_height="@dimen/navigation_header_avater_size"
+            android:layout_marginLeft="@dimen/navigation_header_avater_margin_left"
+            android:layout_marginTop="@dimen/navigation_header_avater_margin_top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar_cat"
+            app:riv_border_color="@color/material_white"
+            app:riv_border_width="@dimen/navigation_header_avater_border_width"
+            app:riv_corner_radius="@dimen/navigation_header_avater_radius"
+            app:riv_mutate_background="true"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/navigation_header_avater_margin_left"
+            android:layout_below="@id/iv_avatar"
+            android:layout_marginTop="@dimen/navigation_header_user_name_margin_top"
+            android:text="@string/user_name"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/tv_interests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/navigation_header_avater_margin_left"
+            android:layout_below="@id/tv_user_name"
+            android:layout_marginTop="@dimen/navigation_header_user_name_margin_top"
+            android:text="@string/interests"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/sub_heading_text_size" />
+    </RelativeLayout>
+
+</FrameLayout>

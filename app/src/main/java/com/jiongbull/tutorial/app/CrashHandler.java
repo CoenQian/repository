@@ -1,6 +1,6 @@
 /*
  * -----------------------------------------------------------------
- * Copyright (C) 2015, by SF-Express, Shenzhen, All rights reserved.
+ * Copyright (C) 2015, by JiongBull, Shenzhen, All rights reserved.
  * -----------------------------------------------------------------
  *
  * File: CrashHandler
@@ -9,9 +9,9 @@
  */
 package com.jiongbull.tutorial.app;
 
-import com.orhanobut.logger.Logger;
-
 import android.content.Context;
+
+import com.orhanobut.logger.Logger;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 

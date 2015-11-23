@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Button的样式 -->
+    <!--<style name="Button">-->
+        <!--<item name="android:layout_height">@dimen/button_height</item>-->
+    <!--</style>-->
+
+    <!--<style name="Button.Big">-->
+        <!--<item name="android:layout_width">match_parent</item>-->
+    <!--</style>-->
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+    <style name="ButtonStyle.Red">
+        <item name="android:background">@drawable/sl_red</item>
+    </style>
+
+    <style name="ButtonStyle.Pink">
+        <item name="android:background">@drawable/sl_pink</item>
+    </style>
+
+    <style name="ButtonStyle.Purple">
+        <item name="android:background">@drawable/sl_purple</item>
+    </style>
+
+    <style name="ButtonStyle.DeepPurple">
+        <item name="android:background">@drawable/sl_deep_purple</item>
+    </style>
+
+    <style name="ButtonStyle.Indigo">
+        <item name="android:background">@drawable/sl_indigo</item>
+    </style>
+
+    <style name="ButtonStyle.Blue">
+        <item name="android:background">@drawable/sl_blue</item>
+    </style>
+
+    <style name="ButtonStyle.LightBlue">
+        <item name="android:background">@drawable/sl_light_blue</item>
+    </style>
+
+    <style name="ButtonStyle.Cyan">
+        <item name="android:background">@drawable/sl_cyan</item>
+    </style>
+
+    <style name="ButtonStyle.Teal">
+        <item name="android:background">@drawable/sl_teal</item>
+    </style>
+
+    <style name="ButtonStyle.Green">
+        <item name="android:background">@drawable/sl_green</item>
+    </style>
+
+    <style name="ButtonStyle.LightGreen">
+        <item name="android:background">@drawable/sl_light_green</item>
+    </style>
+
+    <style name="ButtonStyle.Lime">
+        <item name="android:background">@drawable/sl_lime</item>
+    </style>
+
+    <style name="ButtonStyle.Yellow">
+        <item name="android:background">@drawable/sl_yellow</item>
+    </style>
+
+    <style name="ButtonStyle.Amber">
+        <item name="android:background">@drawable/sl_amber</item>
+    </style>
+
+    <style name="ButtonStyle.Orange">
+        <item name="android:background">@drawable/sl_orange</item>
+    </style>
+
+    <style name="ButtonStyle.DeepOrange">
+        <item name="android:background">@drawable/sl_deep_orange</item>
+    </style>
+
+    <style name="ButtonStyle.Brown">
+        <item name="android:background">@drawable/sl_brown</item>
+    </style>
+
+    <style name="ButtonStyle.Grey">
+        <item name="android:background">@drawable/sl_grey</item>
+    </style>
+
+    <style name="ButtonStyle.BlueGrey">
+        <item name="android:background">@drawable/sl_blue_grey</item>
+    </style>
+
+</resources>

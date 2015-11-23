@@ -15,13 +15,14 @@
  */
 package com.jiongbull.tutorial.app;
 
-import com.facebook.stetho.Stetho;
-import com.jiongbull.tutorial.R;
-import com.orhanobut.logger.LogLevel;
-import com.orhanobut.logger.Logger;
-
 import android.app.Application;
 import android.content.Context;
+
+import com.facebook.stetho.Stetho;
+import com.jiongbull.tutorial.R;
+import com.jiongbull.tutorial.util.ThemeUtils;
+import com.orhanobut.logger.LogLevel;
+import com.orhanobut.logger.Logger;
 
 /**
  * Root application.
@@ -36,7 +37,8 @@ public class RootApp extends Application {
         sContext = getApplicationContext();
         initLogger();
         initStetho();
-        Thread.setDefaultUncaughtExceptionHandler(new CrashHandler(this));
+        ThemeUtils.initTheme(this);
+//        Thread.setDefaultUncaughtExceptionHandler(new CrashHandler(this));
     }
 
     /**

@@ -9,25 +9,13 @@
         <!-- 组件的强调色 -->
         <item name="colorAccent">?attr/primary_color</item>
         <!-- 背景色 -->
-        <item name="android:windowBackground">@color/material_white</item>
-    </style>
-
-    <!-- 应用基本主题 -->
-    <style name="AppBaseTheme" parent="BaseTheme">
-        <!-- 可选item的背景 -->
-        <item name="android:selectableItemBackground">@drawable/sl_item</item>
-        <!-- CheckBox样式 -->
-        <item name="checkboxStyle">@style/CheckBoxStyle</item>
+        <item name="android:windowBackground">@color/bg_window</item>
     </style>
 
     <!-- 默认应用主题 -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- 主色调 -->
-        <item name="primary_color">@color/material_blue_500</item>
-        <!-- 从色调 -->
-        <item name="secondary_color">@color/material_blue_700</item>
-        <!-- Button样式 -->
-        <item name="buttonStyle">@style/ButtonStyle</item>
+    <style name="AppTheme" parent="BaseTheme">
+        <!-- CheckBox样式 -->
+        <item name="checkboxStyle">@style/CheckBoxStyle</item>
     </style>
 
     <!-- 红色主题 -->

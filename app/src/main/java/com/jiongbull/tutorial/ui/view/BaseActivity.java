@@ -1,6 +1,6 @@
 /*
  * -----------------------------------------------------------------
- * Copyright (C) 2015, by SF-Express, Shenzhen, All rights reserved.
+ * Copyright (C) 2015, by JiongBull, Shenzhen, All rights reserved.
  * -----------------------------------------------------------------
  *
  * File: BaseActivity
@@ -9,9 +9,6 @@
  */
 package com.jiongbull.tutorial.ui.view;
 
-import com.sf.module.edms.helper.R;
-import com.sf.module.edms.helper.uitl.ThemeUtils;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,6 +16,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import com.jiongbull.tutorial.R;
+import com.jiongbull.tutorial.util.ThemeUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        initTheme();
+        ThemeUtils.initTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
         ButterKnife.bind(this);
@@ -103,19 +103,16 @@ public abstract class BaseActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    /**
-     * 设置主题.
-     */
-    private void initTheme() {
-        ThemeUtils.Theme theme = ThemeUtils.getCurTheme();
-        ThemeUtils.setTheme(this, theme);
-    }
-
     @Nullable
     @Override
     public Intent getSupportParentActivityIntent() {
+        Intent parentIntent = getIntent();
         Intent intent = new Intent();
-        intent.setClass(this, getIntent().getClass());
+        if (parentIntent != null) {
+            intent.setClass(this, getIntent().getClass());
+        } else {
+            intent.setClass(this, MainActivity.class);
+        }
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         return intent;
     }

@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Tutorial</string>
     <string name="home">首页</string>
-    <string name="settings">设置</string>
     <string name="user_name">JiongBull</string>
     <string name="interests">跑步/登山</string>
+    <string name="android_art">Android开发艺术探索</string>
+    <string name="settings">设置</string>
 </resources>

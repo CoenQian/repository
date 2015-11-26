@@ -5,4 +5,6 @@
     <string name="interests">跑步/登山</string>
     <string name="android_art">Android开发艺术探索</string>
     <string name="settings">设置</string>
+    <string name="drawer_open">开</string>
+    <string name="drawer_close">关</string>
 </resources>

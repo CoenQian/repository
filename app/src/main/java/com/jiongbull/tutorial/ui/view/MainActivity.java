@@ -11,7 +11,10 @@ package com.jiongbull.tutorial.ui.view;
 
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.jiongbull.tutorial.R;
 
@@ -28,6 +31,8 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.navigation)
     NavigationView mNavigation;
 
+    ActionBarDrawerToggle mDrawerToggle;
+
     @Override
     protected int getLayoutResId() {
         return R.layout.activity_main;
@@ -36,6 +41,11 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initToolBar() {
         super.initToolBar("测试");
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+//            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
@@ -45,6 +55,31 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.drawer_open, R.string.drawer_close);
+        mDrawerToggle.syncState();
+
+        mDrawer.setDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                mDrawerToggle.onDrawerSlide(drawerView, slideOffset);
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                mDrawerToggle.onDrawerOpened(drawerView);
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                mDrawerToggle.onDrawerClosed(drawerView);
+            }
+
+            @Override
+            public void onDrawerStateChanged(int newState) {
+                mDrawerToggle.onDrawerStateChanged(newState);
+            }
+        });
+
         mNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -57,17 +92,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        boolean flag = false;
-        switch (item.getItemId()) {
-            case R.id.drawer_android_art:
-                flag = true;
-                break;
-            case R.id.drawer_settings:
-                flag = true;
-                break;
-            default:
-                break;
-        }
-        return flag;
+        return mDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 }

@@ -11,16 +11,12 @@ package com.jiongbull.tutorial.ui.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.jiongbull.tutorial.R;
 import com.jiongbull.tutorial.util.ThemeUtils;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -28,8 +24,8 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
+//    @Bind(R.id.toolbar)
+//    Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +34,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getLayoutResId());
         ButterKnife.bind(this);
         initVariables();
-        initToolBar();
+//        initToolBar();
         initViews();
     }
 
@@ -49,10 +45,10 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected abstract int getLayoutResId();
 
-    /**
-     * 初始化操作栏.
-     */
-    protected abstract void initToolBar();
+//    /**
+//     * 初始化操作栏.
+//     */
+//    protected abstract void initToolBar();
 
     /**
      * 初始化类变量.
@@ -64,10 +60,10 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected abstract void initViews();
 
-    protected void initToolBar(@NonNull String title) {
-        mToolbar.setTitle(title);
-        setSupportActionBar(mToolbar);
-    }
+//    protected void initToolBar(@NonNull String title) {
+//        mToolbar.setTitle(title);
+//        setSupportActionBar(mToolbar);
+//    }
 
     /**
      * 淡化SystemBar.
@@ -110,10 +106,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         Intent intent = new Intent();
         if (parentIntent != null) {
             intent.setClass(this, getIntent().getClass());
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         } else {
             intent.setClass(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         }
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         return intent;
     }
 }

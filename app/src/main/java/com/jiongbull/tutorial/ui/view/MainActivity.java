@@ -9,9 +9,10 @@
  */
 package com.jiongbull.tutorial.ui.view;
 
+import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,11 +42,18 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initToolBar() {
         super.initToolBar("测试");
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-//            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
     @Override
@@ -56,7 +64,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initViews() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.drawer_open, R.string.drawer_close);
-        mDrawerToggle.syncState();
 
         mDrawer.setDrawerListener(new DrawerLayout.DrawerListener() {
             @Override

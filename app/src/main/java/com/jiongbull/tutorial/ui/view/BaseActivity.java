@@ -24,9 +24,6 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
-//    @Bind(R.id.toolbar)
-//    Toolbar mToolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ThemeUtils.initTheme(this);
@@ -34,7 +31,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getLayoutResId());
         ButterKnife.bind(this);
         initVariables();
-//        initToolBar();
         initViews();
     }
 
@@ -45,11 +41,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected abstract int getLayoutResId();
 
-//    /**
-//     * 初始化操作栏.
-//     */
-//    protected abstract void initToolBar();
-
     /**
      * 初始化类变量.
      */
@@ -59,11 +50,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化视图.
      */
     protected abstract void initViews();
-
-//    protected void initToolBar(@NonNull String title) {
-//        mToolbar.setTitle(title);
-//        setSupportActionBar(mToolbar);
-//    }
 
     /**
      * 淡化SystemBar.

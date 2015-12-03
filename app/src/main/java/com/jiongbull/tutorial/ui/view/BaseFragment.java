@@ -21,7 +21,7 @@ import android.view.ViewGroup;
 import butterknife.ButterKnife;
 
 /**
- * Fragment基类.
+ * Base fragment.
  */
 public abstract class BaseFragment extends Fragment {
 

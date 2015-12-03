@@ -9,13 +9,21 @@
  */
 package com.jiongbull.tutorial.ui.view.book;
 
+import com.jiongbull.tutorial.ui.bean.Topic;
 import com.jiongbull.tutorial.ui.view.BaseFragment;
 
+import java.util.List;
+
 /**
- * 章节.
+ * Chapter fragment.
  */
 public class ChapterFragment extends BaseFragment {
-x
+
+    private List<Topic> mTopics;
+
+    public ChapterFragment() {
+    }
+
     @Override
     protected int getLayoutResId() {
         return 0;
@@ -29,33 +37,5 @@ x
     @Override
     protected void initViews() {
 
-    }
-
-    /**
-     * 专题.
-     */
-    public static class Topic {
-
-        /** 名称. */
-        private String mName;
-
-        /** Activity全限定名. */
-        private String mActivityName;
-
-        public String getName() {
-            return mName;
-        }
-
-        public void setName(String name) {
-            mName = name;
-        }
-
-        public String getActivityName() {
-            return mActivityName;
-        }
-
-        public void setActivityName(String activityName) {
-            mActivityName = activityName;
-        }
     }
 }

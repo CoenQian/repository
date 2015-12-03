@@ -12,6 +12,7 @@ package com.jiongbull.tutorial.ui.view.drawer;
 import com.jiongbull.tutorial.R;
 import com.jiongbull.tutorial.ui.view.BaseFragment;
 import com.jiongbull.tutorial.ui.view.MainActivity;
+import com.jiongbull.tutorial.ui.view.book.ChapterFragment;
 import com.orhanobut.logger.Logger;
 
 import android.content.Context;
@@ -104,12 +105,12 @@ public class AndroidArtFragment extends BaseFragment {
         });
 
         TabLayout.Tab tab;
-        for (int i = 0; i < chapters.length; i++) {
+        for (String chapter : chapters) {
             tab = mTabLayout.newTab();
-            tab.setText(chapters[i]);
+            tab.setText(chapter);
             mTabLayout.addTab(tab);
+            mFragments.add(new ChapterFragment());
         }
-
     }
 
 

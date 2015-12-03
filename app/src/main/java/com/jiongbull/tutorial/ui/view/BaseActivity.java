@@ -9,18 +9,18 @@
  */
 package com.jiongbull.tutorial.ui.view;
 
+import com.jiongbull.tutorial.util.ThemeUtils;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jiongbull.tutorial.util.ThemeUtils;
-
 import butterknife.ButterKnife;
 
 /**
- * Activity基类.
+ * Base activity.
  */
 public abstract class BaseActivity extends AppCompatActivity {
 

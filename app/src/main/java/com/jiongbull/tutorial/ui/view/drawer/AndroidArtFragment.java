@@ -1,6 +1,6 @@
 /*
  * -----------------------------------------------------------------
- * Copyright (C) 2015, by SF-Express, Shenzhen, All rights reserved.
+ * Copyright (C) 2015, by JiongBull, Shenzhen, All rights reserved.
  * -----------------------------------------------------------------
  *
  * File: AndroidArtFragment
@@ -9,18 +9,24 @@
  */
 package com.jiongbull.tutorial.ui.view.drawer;
 
+import com.jiongbull.tutorial.R;
+import com.jiongbull.tutorial.ui.view.BaseFragment;
+import com.jiongbull.tutorial.ui.view.MainActivity;
+import com.orhanobut.logger.Logger;
+
 import android.content.Context;
 import android.content.res.Configuration;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.jiongbull.tutorial.R;
-import com.jiongbull.tutorial.ui.view.BaseFragment;
-import com.jiongbull.tutorial.ui.view.MainActivity;
-import com.orhanobut.logger.Logger;
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 
@@ -32,9 +38,18 @@ public class AndroidArtFragment extends BaseFragment {
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
+    @Bind(R.id.tab_layout)
+    TabLayout mTabLayout;
+
+    @Bind(R.id.view_pager)
+    ViewPager mViewPager;
+
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawer;
     private MainActivity mMainActivity;
+
+    private String[] chapters;
+    private List<Fragment> mFragments;
 
     @Override
     public void onAttach(Context context) {
@@ -54,6 +69,8 @@ public class AndroidArtFragment extends BaseFragment {
 
     @Override
     protected void initVariables() {
+        chapters = getResources().getStringArray(R.array.android_art_chapters);
+        mFragments = new ArrayList<>();
 
     }
 
@@ -85,6 +102,14 @@ public class AndroidArtFragment extends BaseFragment {
                 mDrawerToggle.onDrawerStateChanged(newState);
             }
         });
+
+        TabLayout.Tab tab;
+        for (int i = 0; i < chapters.length; i++) {
+            tab = mTabLayout.newTab();
+            tab.setText(chapters[i]);
+            mTabLayout.addTab(tab);
+        }
+
     }
 
 

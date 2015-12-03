@@ -22,4 +22,29 @@
         <!--<item>com.sf.module.edms.helper.ui.view.WebViewActivity</item>-->
     </string-array>
 
+    <string-array name="android_art_chapters">
+        <item>@string/chapter_1</item>
+        <item>@string/chapter_2</item>
+        <item>@string/chapter_3</item>
+        <item>@string/chapter_4</item>
+        <item>@string/chapter_5</item>
+        <item>@string/chapter_6</item>
+        <item>@string/chapter_7</item>
+        <item>@string/chapter_8</item>
+        <item>@string/chapter_9</item>
+        <item>@string/chapter_10</item>
+        <item>@string/chapter_11</item>
+        <item>@string/chapter_12</item>
+        <item>@string/chapter_13</item>
+        <item>@string/chapter_14</item>
+        <item>@string/chapter_15</item>
+    </string-array>
+
+    <string-array name="android_art_chapter_1_function_names">
+
+    </string-array>
+
+    <string-array name="android_art_chapter_1_function_intents">
+
+    </string-array>
 </resources>

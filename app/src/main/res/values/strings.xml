@@ -7,4 +7,21 @@
     <string name="settings">设置</string>
     <string name="drawer_open">开</string>
     <string name="drawer_close">关</string>
+
+    <!-- 章节 -->
+    <string name="chapter_1">第一章</string>
+    <string name="chapter_2">第二章</string>
+    <string name="chapter_3">第三章</string>
+    <string name="chapter_4">第四章</string>
+    <string name="chapter_5">第五章</string>
+    <string name="chapter_6">第六章</string>
+    <string name="chapter_7">第七章</string>
+    <string name="chapter_8">第八章</string>
+    <string name="chapter_9">第九章</string>
+    <string name="chapter_10">第十章</string>
+    <string name="chapter_11">第十一章</string>
+    <string name="chapter_12">第十二章</string>
+    <string name="chapter_13">第十三章</string>
+    <string name="chapter_14">第十四章</string>
+    <string name="chapter_15">第十五章</string>
 </resources>

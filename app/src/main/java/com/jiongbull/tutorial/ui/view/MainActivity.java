@@ -9,13 +9,13 @@
  */
 package com.jiongbull.tutorial.ui.view;
 
+import com.jiongbull.tutorial.R;
+import com.jiongbull.tutorial.ui.view.drawer.AndroidArtFragment;
+
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
-
-import com.jiongbull.tutorial.R;
-import com.jiongbull.tutorial.ui.view.drawer.AndroidArtFragment;
 
 import butterknife.Bind;
 
@@ -66,7 +66,11 @@ public class MainActivity extends BaseActivity {
                 return true;
             }
         });
-        mNavigation.setCheckedItem(R.id.drawer_android_art);
+        if (mAndroidArtFragment == null) {
+            mAndroidArtFragment = new AndroidArtFragment();
+        }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flyt_content, mAndroidArtFragment).commit();
     }
 
     public DrawerLayout getDrawer() {

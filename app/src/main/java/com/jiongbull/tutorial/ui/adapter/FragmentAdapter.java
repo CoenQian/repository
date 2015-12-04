@@ -28,7 +28,7 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
 
     public FragmentAdapter(@NonNull FragmentManager fm, @NonNull List<Fragment> fragments, @NonNull String[] titles) {
         super(fm);
-        if (fragments.size() != mTitles.length) {
+        if (fragments.size() != titles.length) {
             Logger.e("fragment's size must equals title's size");
             throw new IllegalArgumentException("fragment's size must equals title's size");
         }

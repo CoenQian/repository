@@ -10,9 +10,11 @@
 package com.jiongbull.tutorial.ui.view.drawer;
 
 import com.jiongbull.tutorial.R;
+import com.jiongbull.tutorial.app.RootApp;
+import com.jiongbull.tutorial.bean.factory.AndroidArtChapterFragmentFactory;
+import com.jiongbull.tutorial.ui.adapter.FragmentAdapter;
 import com.jiongbull.tutorial.ui.view.BaseFragment;
 import com.jiongbull.tutorial.ui.view.MainActivity;
-import com.jiongbull.tutorial.ui.view.book.ChapterFragment;
 import com.orhanobut.logger.Logger;
 
 import android.content.Context;
@@ -72,7 +74,6 @@ public class AndroidArtFragment extends BaseFragment {
     protected void initVariables() {
         chapters = getResources().getStringArray(R.array.android_art_chapters);
         mFragments = new ArrayList<>();
-
     }
 
     @Override
@@ -105,12 +106,18 @@ public class AndroidArtFragment extends BaseFragment {
         });
 
         TabLayout.Tab tab;
+        AndroidArtChapterFragmentFactory androidArtChapterFragmentFactory = new AndroidArtChapterFragmentFactory(RootApp.getContext());
         for (String chapter : chapters) {
             tab = mTabLayout.newTab();
             tab.setText(chapter);
             mTabLayout.addTab(tab);
-            mFragments.add(new ChapterFragment());
+            mFragments.add(androidArtChapterFragmentFactory.createChapterFragment(chapter));
         }
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(getFragmentManager(), mFragments, chapters);
+        mViewPager.setAdapter(fragmentAdapter);
+        mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        mTabLayout.setupWithViewPager(mViewPager);
+        mTabLayout.setTabsFromPagerAdapter(fragmentAdapter);
     }
 
 

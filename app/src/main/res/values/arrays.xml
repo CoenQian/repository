@@ -47,4 +47,12 @@
     <string-array name="android_art_chapter_1_function_intents">
 
     </string-array>
+
+    <string-array name="android_art_chapter_2_function_names">
+
+    </string-array>
+
+    <string-array name="android_art_chapter_2_function_intents">
+
+    </string-array>
 </resources>

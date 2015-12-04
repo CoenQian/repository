@@ -10,18 +10,19 @@
 package com.jiongbull.tutorial.constant;
 
 /**
- * Extra.
+ * Extras.
  */
-public enum Extra {
+public enum Extras {
 
     /** 前缀, 请勿使用. */
     PRE("com.jiongbull.tutorial.extra."),
     INFO(PRE.mValue + "INFO"),
-    NAME(PRE.mValue + "NAME");
+    NAME(PRE.mValue + "NAME"),
+    TOPICS(PRE.mValue + "TOPICS");
 
     private String mValue;
 
-    Extra(String value) {
+    Extras(String value) {
         mValue = value;
     }
 

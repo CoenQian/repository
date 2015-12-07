@@ -24,4 +24,6 @@
     <string name="chapter_13">第十三章</string>
     <string name="chapter_14">第十四章</string>
     <string name="chapter_15">第十五章</string>
+
+    <string name="activity_lifestyle">Activity生命周期</string>
 </resources>

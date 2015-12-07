@@ -32,11 +32,11 @@
     <dimen name="button_height">50dp</dimen>
 
     <!-- CardView -->
-    <dimen name="card_view_radius">20dp</dimen>
-    <dimen name="card_view_elevation">5dp</dimen>
-    <dimen name="card_view_max_elevation">10dp</dimen>
+    <dimen name="card_view_radius">5dp</dimen>
+    <dimen name="card_view_elevation">2dp</dimen>
+    <dimen name="card_view_max_elevation">5dp</dimen>
 
-    <dimen name="item_function_width">300dp</dimen>
-    <dimen name="item_function_height">400dp</dimen>
+    <dimen name="item_topic_width">100dp</dimen>
+    <dimen name="item_topic_height">50dp</dimen>
 
 </resources>

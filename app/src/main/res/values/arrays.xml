@@ -27,11 +27,11 @@
     </string-array>
 
     <string-array name="android_art_chapter_1_function_names">
-        <string>@string/activity_lifestyle</string>
+        <item>@string/activity_lifestyle</item>
     </string-array>
 
     <string-array name="android_art_chapter_1_function_intents">
-        <string>com.jiongbull.tutorial.ui.view.book.androidart.chapter1.LifecycleActivity</string>
+        <item>com.jiongbull.tutorial.ui.view.book.androidart.chapter1.LifecycleActivity</item>
     </string-array>
 
     <string-array name="android_art_chapter_2_function_names">

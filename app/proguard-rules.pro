@@ -1,17 +1,140 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in D:\Application\Program\Android SDK/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+##---------------Begin: proguard configuration common for all Android apps ----------
+# 压缩级别
+-optimizationpasses 5
+# 不使用大小写混合的类名
+-dontusemixedcaseclassnames
+# 不忽略非公共库的类
+-dontskipnonpubliclibraryclasses
+# 不忽略非公共库的类成员
+-dontskipnonpubliclibraryclassmembers
+# 不要预校验
+-dontpreverify
+# 混淆时是否记录日志
+-verbose
+# 混淆算法
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
 
-# Add any project specific keep options here:
+##---------------Begin: 日志相关----------##
+# 描述 .apk 文件中所有类文件的内部结构
+-dump class_files.txt
+# 列出未混淆的类和成员
+-printseeds seeds.txt
+# 列出从 .apk 删除的代码
+-printusage unused.txt
+# 列出原始与混淆后的类、方法和字段名称之间的对应关系
+-printmapping mapping.txt
+##---------------End: 日志相关----------##
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
+# 优化时允许访问并修改有修饰符的类和类的成员
+-allowaccessmodification
+# 保留注解属性
+-keepattributes *Annotation*
+# 重定义源文件中的类名
+-renamesourcefileattribute SourceFile
+# 保留属性（源文件名、行号）
+-keepattributes SourceFile,LineNumberTable
+# 重新定义包名
+-repackageclasses ''
+
+# 不混淆指定的类和类成员
+# keep {modifier} class_specification
+
+# 不混淆指定类的成员
+# keepclassmemebers {modifier} class_specification
+
+# 不混淆指定的类和类的成员
+# keepclasswithmembers {modifier} class_specification
+
+# 不混淆指定的类和类的成员名称
+# keepnames class_specification
+
+# 不混淆类的成员名
+# keepclassmembernames class_specification
+
+# 不混淆类名和类的成员名
+# keepclasseswithmembernames class_specification
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+-dontnote com.android.vending.licensing.ILicensingService
+
+# Explicitly preserve all serialization members. The Serializable interface
+# is only a marker interface, so it wouldn't save them.
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+# Preserve all native method names and the names of their classes.
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+# Preserve static fields of inner classes of R classes that might be accessed
+# through introspection.
+-keepclassmembers class **.R$* {
+  public static <fields>;
+}
+
+# Preserve the special static methods that are required in all enumeration classes.
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#-keep public class * {
+#    public protected *;
 #}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+#---------------End: proguard configuration common for all Android apps ----------
+
+##---------------Begin: proguard configuration for Gson----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+#-keep class com.google.gson.stream.** { *; }
+
+# Application classes that will be serialized/deserialized over Gson
+-keep class com.google.gson.examples.android.model.** { *; }
+##---------------End: proguard configuration for Gson----------
+
+
+##---------------Begin: proguard configuration for Apache Http----------
+-dontwarn org.apache.http.**
+-keep class org.apache.http.**{*;}
+-keep interface org.apache.http.**{*;}
+##---------------End: proguard configuration for Apache Http----------
+
+##---------------Begin: proguard configuration for support-v4----------
+-dontwarn android.support.v4.**
+-keep interface android.support.v4.app.** { *; }
+-keep class android.support.v4.** { *; }
+-keep public class * extends android.support.v4.**
+##---------------End: proguard configuration for support-v4----------

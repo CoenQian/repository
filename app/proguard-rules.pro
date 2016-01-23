@@ -30,7 +30,7 @@
 # 保留注解属性
 -keepattributes *Annotation*
 # 重定义源文件中的类名
--renamesourcefileattribute SourceFile
+# -renamesourcefileattribute SourceFile
 # 保留属性（源文件名、行号）
 -keepattributes SourceFile,LineNumberTable
 # 重新定义包名
@@ -138,3 +138,35 @@
 -keep class android.support.v4.** { *; }
 -keep public class * extends android.support.v4.**
 ##---------------End: proguard configuration for support-v4----------
+
+##---------------Begin: proguard configuration for support-v7----------
+-dontwarn android.support.v7.**
+-keep interface android.support.v7.app.** { *; }
+-keep class android.support.v7.** { *; }
+-keep public class * extends android.support.v7.**
+##---------------End: proguard configuration for support-v7----------
+
+##---------------Begin: proguard configuration for support----------
+-keep class android.support.design.** { *; }
+##---------------End: proguard configuration for support----------
+
+##---------------Begin: proguard configuration for JLog----------
+-keep class com.jiongbull.jlog.** { *; }
+##---------------End: proguard configuration for JLog----------
+
+##---------------Begin: proguard configuration for ButterKnife----------
+-keep class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keep class **$$ViewBinder { *; }
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <fields>;
+}
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <methods>;
+}
+##---------------End: proguard configuration for ButterKnife----------
+
+-dontwarn com.squareup.picasso.**
+-keep class com.makeramen.roundedimageview.** { *; }

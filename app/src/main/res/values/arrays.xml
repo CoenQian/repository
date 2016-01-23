@@ -31,7 +31,7 @@
     </string-array>
 
     <string-array name="android_art_chapter_1_function_intents">
-        <item>com.jiongbull.tutorial.ui.view.book.androidart.chapter1.LifecycleActivity</item>
+        <item>com.jiongbull.repository.ui.view.book.androidart.chapter1.LifecycleActivity</item>
     </string-array>
 
     <string-array name="android_art_chapter_2_function_names">
